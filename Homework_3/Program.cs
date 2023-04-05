@@ -28,7 +28,7 @@ Console.WriteLine("Число не является палиндромом");
 
 //Задача 2. Напишите программу, которая принимает на вход координаты двух точек
 //и находит расстояние между ними в 3D пространстве.
-
+/*
 double Length(int x1, int y1, int z1, int x2, int y2, int z2)
 {
     return Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2));
@@ -52,4 +52,20 @@ int z2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
 
 Console.WriteLine($"Расстояние между точками А и В равно {Math.Round(Length(x1, y1, z1, x2, y2, z2), 2)}");
+*/
 
+//Задача 3.Напишите программу, которая принимает на вход число (N)
+//и выдаёт таблицу кубов чисел от 1 до N.
+
+void Cube (int n)
+{
+   for (int i = 1; i <= n; i++)
+   {
+      Console.WriteLine($"{i} - {Math.Pow(i, 3)}");
+   }
+}
+
+Console.WriteLine("Введите число N: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Cube(n);

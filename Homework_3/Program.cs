@@ -56,7 +56,7 @@ Console.WriteLine($"Расстояние между точками А и В ра
 
 //Задача 3.Напишите программу, которая принимает на вход число (N)
 //и выдаёт таблицу кубов чисел от 1 до N.
-
+/*
 void Cube (int n)
 {
    for (int i = 1; i <= n; i++)
@@ -69,3 +69,4 @@ Console.WriteLine("Введите число N: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 Cube(n);
+*/

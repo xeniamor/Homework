@@ -38,7 +38,7 @@ Console.WriteLine (ThirdDigit (num));
 
 //Задача 3.Напишите программу, которая принимает на вход цифру, 
 //обозначающую день недели, и проверяет,является ли этот день выходным.
-
+/*
 bool Weekend(int numday)
 {
     if(numday >= 6 && numday <= 7) return true;
@@ -52,3 +52,5 @@ if(Weekend(numday) == true)
 Console.WriteLine("Да, день является выходным");
 else 
 Console.WriteLine("День не является выходным");
+*/
+

@@ -1,5 +1,6 @@
 ﻿//Задача 1. Задайте массив заполненный случайными положительными трёхзначными числами.
 //Напишите программу, которая покажет количество чётных чисел в массиве.
+
 int[] CreateArrayPositiveThreeDigitRandom(int size)
 {
    int[] array = new int[size];
@@ -27,4 +28,5 @@ int size = Convert.ToInt32(Console.ReadLine());
 int[] newArray = CreateArrayPositiveThreeDigitRandom(size);
 ShowArray(newArray);
 int result = QuantityEvenNumbers(newArray);
-Console.WriteLine($"Количество четных чиссел в массиве равняется {result}");
+Console.WriteLine($"Количество четных чисел в массиве - {result}");
+

@@ -70,7 +70,7 @@ Console.WriteLine($"Сумма элементов, стоящих на нече�
 
 //Задача 3. Задайте массив вещественных чисел. 
 //Найдите разницу между максимальным и минимальным элементов массива.
-
+/*
 double[] CreateRandomArrayDoubleDigits(int size, int min, int max)
 {
    double[] array = new double[size];
@@ -115,3 +115,4 @@ double[] newArray = CreateRandomArrayDoubleDigits(size, min, max);
 ShowArray(newArray);
 double result = DiffMaxMin(newArray);
 Console.WriteLine($"Разница между максимальным и минимальным элементами массива - {result}");
+*/

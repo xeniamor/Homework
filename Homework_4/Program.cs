@@ -37,5 +37,28 @@ int result = SummDigit(a);
 Console.WriteLine($"Сумма цифр введенного числа {a} равняется - {result}");
 */
 
+//Задача 3. Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
+int[] CreateArray(int size)
+{
+    int[] array = new int[size];
+    for(int i = 0; i < size; i++)
+    {
+        Console.Write($"Введите {i + 1}-й элемент массива: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    return array;
+}
+void ShowArraay(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+Console.Write("Введите размер массива: ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] newArray = CreateArray(size);
+ShowArraay(newArray);
 

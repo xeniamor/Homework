@@ -38,7 +38,7 @@ Console.WriteLine($"Сумма цифр введенного числа {a} ра
 */
 
 //Задача 3. Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
-/*
+
 int[] CreateArray(int size)
 {
     int[] array = new int[size];
@@ -61,5 +61,5 @@ Console.Write("Введите размер массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
 int[] newArray = CreateArray(size);
 ShowArraay(newArray);
-*/
+
 

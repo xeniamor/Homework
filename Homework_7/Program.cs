@@ -27,4 +27,8 @@ void Show2dArray(double[,] array)
         Console.WriteLine();
     }
 }
-Show2dArray(CreateRandom2dArray());
+double[,] myArray = CreateRandom2dArray();
+Show2dArray (myArray);
+
+
+

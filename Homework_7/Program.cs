@@ -34,7 +34,7 @@ Show2dArray (myArray);
 //Задача 2. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
 //и возвращает значение этого элемента или же указание, что такого элемента нет.
 
-
+/*
 int[,] CreateRandom2dArray()
 {
    Console.WriteLine("Введите корректное количество строк:");
@@ -87,4 +87,62 @@ Console.Write("Введите номер столбца, в котором на�
 int indexColumn = Convert.ToInt32(Console.ReadLine()) - 1;
 
 CheckElementValue(myArray, indexRow, indexColumn);
+*/
 
+//Задача 3. Задайте двумерный массив из целых чисел.
+//Найдите среднее арифметическое элементов в каждом столбце.
+
+int[,] CreateRandom2dArray()
+{
+   Console.WriteLine("Введите корректное количество строк:");
+   int rows = Convert.ToInt32(Console.ReadLine());
+   Console.WriteLine("Введите корректное количество столбцов:");
+   int columns = Convert.ToInt32(Console.ReadLine());
+   Console.WriteLine("Введите минимальное значение:");
+   int min = Convert.ToInt32(Console.ReadLine());
+   Console.WriteLine("Введите максимальное значение:");
+   int max = Convert.ToInt32(Console.ReadLine());
+
+   int[,] array = new int[rows, columns];
+
+   for (int i = 0; i < array.GetLength(0); i++)
+   {
+      for (int j = 0; j < array.GetLength(1); j++)
+      {
+         array[i, j] = new Random().Next(min, max + 1);
+      }
+   }
+   return array;
+}
+
+void Show2dArray(int[,] array)
+
+{
+   for (int i = 0; i < array.GetLength(0); i++)
+   {
+      for (int j = 0; j < array.GetLength(1); j++)
+         Console.Write(array[i, j] + " ");
+      Console.WriteLine();
+   }
+   Console.WriteLine();
+}
+
+double[] AverageElementsColumns(int[,] array)
+{
+   double[] arrayAverage = new double[array.GetLength(1)];
+   for (int j = 0; j < array.GetLength(1); j++)
+   {
+      for (int i = 0; i < array.GetLength(0); i++)
+      {
+         arrayAverage[j] += array[i, j];
+      }
+      arrayAverage[j] = Math.Round((arrayAverage[j] / array.GetLength(0)), 2);
+      Console.Write(arrayAverage[j] + " ");
+   }
+   return arrayAverage;
+}
+
+int[,] myArray = CreateRandom2dArray();
+Show2dArray(myArray);
+Console.WriteLine($"Среднее арифметическое элементов каждого столбца равняется: ");
+AverageElementsColumns(myArray);

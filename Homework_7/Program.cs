@@ -1,6 +1,6 @@
 ﻿//Задача 1. Задайте двумерный массив размером m×n,
 //заполненный случайными вещественными числами.
-
+/*
 double[,] CreateRandom2dArray()
 {
     Console.WriteLine("Введите корректное количество строк:");
@@ -29,6 +29,62 @@ void Show2dArray(double[,] array)
 }
 double[,] myArray = CreateRandom2dArray();
 Show2dArray (myArray);
+*/
+
+//Задача 2. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
+//и возвращает значение этого элемента или же указание, что такого элемента нет.
 
 
+int[,] CreateRandom2dArray()
+{
+   Console.WriteLine("Введите корректное количество строк:");
+   int rows = Convert.ToInt32(Console.ReadLine());
+   Console.WriteLine("Введите корректное количество столбцов:");
+   int columns = Convert.ToInt32(Console.ReadLine());
+   Console.WriteLine("Введите минимальное значение:");
+   int min = Convert.ToInt32(Console.ReadLine());
+   Console.WriteLine("Введите максимальное значение:");
+   int max = Convert.ToInt32(Console.ReadLine());
+
+   int[,] array = new int[rows, columns];
+
+   for (int i = 0; i < array.GetLength(0); i++)
+   {
+      for (int j = 0; j < array.GetLength(1); j++)
+      {
+         array[i, j] = new Random().Next(min, max + 1);
+      }
+   }
+   return array;
+}
+
+void Show2dArray(int[,] array)
+
+{
+   for (int i = 0; i < array.GetLength(0); i++)
+   {
+      for (int j = 0; j < array.GetLength(1); j++)
+         Console.Write(array[i, j] + " ");
+      Console.WriteLine();
+   }
+   Console.WriteLine();
+}
+
+void CheckElementValue(int[,] array, int indexRow, int indexColumn)
+{
+   if (indexRow >= 0 && indexRow <= array.GetLength(0) - 1 && indexColumn >= 0 && indexColumn <= array.GetLength(1) - 1)
+      Console.Write($"Элемент с позицией в строке {indexRow} и столбце {indexColumn} имеет значение: {array[indexRow, indexColumn]}");
+   else
+      Console.Write($"Такого элемента не существует!");
+}
+
+int[,] myArray = CreateRandom2dArray();
+Show2dArray(myArray);
+
+Console.Write("Введите номер строки, в которой находится искомый элемент: ");
+int indexRow = Convert.ToInt32(Console.ReadLine()) - 1;
+Console.Write("Введите номер столбца, в котором находится искомый элемент: ");
+int indexColumn = Convert.ToInt32(Console.ReadLine()) - 1;
+
+CheckElementValue(myArray, indexRow, indexColumn);
 

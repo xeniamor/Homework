@@ -91,7 +91,7 @@ CheckElementValue(myArray, indexRow, indexColumn);
 
 //Задача 3. Задайте двумерный массив из целых чисел.
 //Найдите среднее арифметическое элементов в каждом столбце.
-
+/*
 int[,] CreateRandom2dArray()
 {
    Console.WriteLine("Введите корректное количество строк:");
@@ -146,3 +146,4 @@ int[,] myArray = CreateRandom2dArray();
 Show2dArray(myArray);
 Console.WriteLine($"Среднее арифметическое элементов каждого столбца равняется: ");
 AverageElementsColumns(myArray);
+*/

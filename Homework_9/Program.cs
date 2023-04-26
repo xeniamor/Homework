@@ -33,7 +33,7 @@ Console.Write($"Сумма натуральных элементов между 
 
 // Задача 3. Напишите программу вычисления функции Аккермана с помощью рекурсии.
 // Даны два неотрицательных числа m и n.
-
+/*
 int AkkermanFunction(int m, int n)
 {
     if(m == 0) 
@@ -51,3 +51,4 @@ int n = Convert.ToInt32(Console.ReadLine());
 
 AkkermanFunction(m, n);
 Console.Write($"Значение вычисления функции Аккермана равняется - {AkkermanFunction(m, n)}.");
+*/

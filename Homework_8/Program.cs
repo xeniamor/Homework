@@ -250,7 +250,7 @@ Show3dArray(myArray);
 */
 
 //Задача 5. Напишите программу, которая заполнит спирально массив 4 на 4.
-
+/*
 void SpiralArray(int[,] array, int n)
 {
     int i = 0;
@@ -289,3 +289,4 @@ int lenght = 4;
 int[,] array = new int[lenght, lenght];
 SpiralArray(array, lenght);
 ShowArray(array);
+*/

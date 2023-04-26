@@ -211,7 +211,7 @@ Show2dArray(MatrixResult);
 
 // Задача 4. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел.
 // Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
-
+/*
 int[,,] CreateRandom3dArray()
 {
     Console.Write("Введите кол-во элементов по X: ");
@@ -247,3 +247,45 @@ void Show3dArray(int[,,] array)
 
 int[,,] myArray = CreateRandom3dArray();
 Show3dArray(myArray);
+*/
+
+//Задача 5. Напишите программу, которая заполнит спирально массив 4 на 4.
+
+void SpiralArray(int[,] array, int n)
+{
+    int i = 0;
+    int j = 0;
+    int count = 1;
+    for (int e = 0; e < n * n; e++)
+    {
+        int k = 0;
+        do { array[i, j++] = count++; } while (++k < n - 1);
+        for (k = 0; k < n - 1; k++) array[i++, j] = count++;
+        for (k = 0; k < n - 1; k++) array[i, j--] = count++;
+        for (k = 0; k < n - 1; k++) array[i--, j] = count++;
+        ++i; ++j;
+        n = n < 2 ? 0 : n - 2;
+    }
+}
+
+void ShowArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] < 10)
+            {
+                Console.Write("0" + array[i, j]);
+                Console.Write(" ");
+            }
+            else Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+int lenght = 4;
+int[,] array = new int[lenght, lenght];
+SpiralArray(array, lenght);
+ShowArray(array);

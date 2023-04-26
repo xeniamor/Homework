@@ -129,7 +129,7 @@ RowMinSum(myArray);
 */
 //  Задача 3.Задайте две матрицы. Напишите программу, 
 //  которая будет находить произведение двух матриц.
-
+/*
 int[,] CreateRandom2dArray(int rows, int colums, int minValue, int maxValue)
 {
     int[,] array = new int[rows, colums];
@@ -201,9 +201,49 @@ while (columns1 != rows2)
 
 int[,] Matrix1 = CreateRandom2dArray(rows1, columns1, minValue1, maxValue1);
 int[,] Matrix2 = CreateRandom2dArray(rows2, columns2, minValue2, maxValue2);
-int[,] MatrixRes = MultiplicationMatrix(Matrix1, Matrix2);
+int[,] MatrixResult = MultiplicationMatrix(Matrix1, Matrix2);
 
 
 Show2dArray(Matrix1);
 Show2dArray(Matrix2);
-Show2dArray(MatrixRes);
+Show2dArray(MatrixResult);
+*/
+
+// Задача 4. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел.
+// Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+
+int[,,] CreateRandom3dArray()
+{
+    Console.Write("Введите кол-во элементов по X: ");
+    int x = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите кол-во элементов по Y: ");
+    int y = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите кол-во элементов по Z: ");
+    int z = Convert.ToInt32(Console.ReadLine());
+       
+    int[,,] array = new int[x, y, z];
+
+    for(int i = 0; i < array.GetLength(0); i++)
+        for(int j = 0; j < array.GetLength(1); j++)
+            for(int k = 0; k < array.GetLength(2); k++)  
+                array[i,j,k] = new Random().Next(10, 100);
+    return array;
+}
+
+void Show3dArray(int[,,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.WriteLine();
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                Console.Write($"{array[i, j, k]}({i},{j},{k}) ");
+            }
+        }
+    }
+}
+
+int[,,] myArray = CreateRandom3dArray();
+Show3dArray(myArray);
